@@ -1,0 +1,32 @@
+[project]
+name = "cv4"
+version = "0.0.1"
+description = "A type-safe, builder-pattern, pythonic wrapper for OpenCV"
+readme = "README.md"
+authors = [{ name = "kytpbs", email = "email@example.com" }]
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0.0"]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.optional-dependencies]
+opencv = ["opencv-python>=5.0.0.93"]
+opencv-headless = ["opencv-python-headless>=5.0.0.93"]
+contrib = ["opencv-contrib-python>=5.0.0.93"]
+contrib-headless = ["opencv-contrib-python-headless>=5.0.0.93"]
+
+# tell uv these extras can't be installed together
+[tool.uv]
+conflicts = [[
+  { extra = "opencv" }, { extra = "opencv-headless" },
+  { extra = "contrib" }, { extra = "contrib-headless" },
+]]
+
+[build-system]
+requires = ["uv_build>=0.13.4,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "opencv-python>=5.0.0.93",
+]
