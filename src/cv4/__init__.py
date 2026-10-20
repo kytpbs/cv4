@@ -8,6 +8,7 @@ except ImportError as e:
         "cv4 requires OpenCV. Install it with `pip install cv4[opencv]`, or provide your own cv2 build."
     ) from e
 
+from .main import *  # noqa: F401,F403
 
 def hello() -> str:
     return "Hello from cv4!"

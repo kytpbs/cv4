@@ -15,6 +15,9 @@ opencv-headless = ["opencv-python-headless>=5.0.0.93"]
 contrib = ["opencv-contrib-python>=5.0.0.93"]
 contrib-headless = ["opencv-contrib-python-headless>=5.0.0.93"]
 
+[project.urls]
+Homepage = "https://github.com/kytpbs/cv4"
+
 # tell uv these extras can't be installed together
 [tool.uv]
 conflicts = [[
