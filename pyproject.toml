@@ -1,10 +1,10 @@
 [project]
 name = "cv4"
-version = "0.0.1"
+version = "0.0.2"
 description = "A type-safe, builder-pattern, pythonic wrapper for OpenCV"
 readme = "README.md"
 authors = [{ name = "kytpbs", email = "email@example.com" }]
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = ["numpy>=2.0.0"]
 license = "MIT"
 license-files = ["LICEN[CS]E*"]
